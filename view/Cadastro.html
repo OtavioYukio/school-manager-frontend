@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - SchoolHub</title>
+    <link rel="stylesheet" href="../public/style/style.css">
+</head>
+<body>
+    <!-- Hotbar Ancorada -->
+    <nav class="hotbar">
+        <div class="hotbar-container">
+            <div class="hotbar-logo">
+                <h1>SchoolHub</h1>
+            </div>
+            
+            <ul class="hotbar-menu">
+                <li><a href="LandingPage.html" class="nav-link">Início</a></li>
+                <li><a href="LandingPage.html#recursos" class="nav-link">Recursos</a></li>
+                <li><a href="LandingPage.html#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="LandingPage.html#contato" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="hotbar-actions">
+                <button class="btn-entrar" onclick="window.location.href='Login.html'">Entrar</button>
+                <button class="btn-cadastrar" onclick="window.location.href='LandingPage.html'">Voltar</button>
+            </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Principal de Cadastro -->
+    <div class="cadastro-container" id="cadastro-container">
+        <div class="cadastro-card fade-in">
+            <!-- Progress Indicator -->
+            <div class="progress-indicator">
+                <div class="progress-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Instituição</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Credenciais</div>
+                </div>
+            </div>
+
+            <div class="cadastro-header">
+                <h2>Cadastre sua Instituição</h2>
+                <p>Primeiro, vamos conhecer sua escola</p>
+            </div>
+
+            <form class="cadastro-form" onsubmit="handleCadastroEtapa1(event)">
+                <!-- Campo Nome da Escola -->
+                <div class="form-group">
+                    <label for="nomeEscola">Nome da Instituição</label>
+                    <input 
+                        type="text" 
+                        id="nomeEscola" 
+                        name="nomeEscola" 
+                        placeholder="Ex: Escola Municipal São João" 
+                        required
+                        class="form-input"
+                    >
+                    <span class="input-icon">🏫</span>
+                </div>
+
+                <!-- Botão Avançar -->
+                <button type="submit" class="btn-avancar">
+                    Avançar
+                </button>
+            </form>
+
+            <!-- Link para Login -->
+            <div class="form-footer">
+                <p>Já tem uma conta? <a href="Login.html" class="link-login">Entrar aqui</a></p>
+            </div>
+
+            <!-- Info -->
+            <div class="security-info">
+                <p>🔐 Seus dados são protegidos com criptografia de ponta</p>
+            </div>
+        </div>
+
+        <!-- Decoração -->
+        <div class="cadastro-decoration"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../src/notifications.js"></script>
+    <script src="../src/menu-controls.js"></script>
+    <script src="../src/navigation.js"></script>
+    <script src="../src/cadastro-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SchoolHub</title>
+    <link rel="stylesheet" href="../public/style/style.css">
+</head>
+<body class="pagina-protegida">
+    <!-- Hotbar Ancorada -->
+    <nav class="hotbar">
+        <div class="hotbar-container">
+            <div class="hotbar-logo">
+                <h1>SchoolHub</h1>
+            </div>
+            
+            <ul class="hotbar-menu">
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#configuracoes" class="nav-link">Configurações</a></li>
+                <li><a href="#ajuda" class="nav-link">Ajuda</a></li>
+            </ul>
+
+            <div class="hotbar-actions">
+                <div class="user-info">
+                    <span id="nome-usuario" class="usuario-nome"></span>
+                </div>
+                <button class="btn-entrar" id="btn-logout" onclick="confirmarLogout()" style="display: none;">
+                    Sair
+                </button>
+            </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="dashboard-container">
+        <div class="dashboard-card fade-in">
+            <div class="dashboard-header">
+                <h2>Dashboard</h2>
+                <p id="dashboard-subtitle">Carregando...</p>
+            </div>
+
+            <!-- Conteúdo Administrativo -->
+            <div id="admin-content" style="display: none;">
+                <div class="user-details">
+                    <div class="detail-card">
+                        <h3>🏫 Instituição</h3>
+                        <p id="user-instituicao">Carregando...</p>
+                    </div>
+                </div>
+
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <h3>👥 Gerenciar Alunos</h3>
+                        <p>Adicione, edite ou remova alunos</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>🏫 Gerenciar Professores</h3>
+                        <p>Adicione, edite ou remova professores</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>📚 Gerenciar Disciplinas</h3>
+                        <p>Configure as disciplinas e turmas</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>📊 Relatórios</h3>
+                        <p>Veja relatórios e estatísticas</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>⚙️ Configurações</h3>
+                        <p>Personalize sua instituição</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo Pedagógico -->
+            <div id="teacher-content" style="display: none;">
+                <div class="user-details">
+                    <div class="detail-card">
+                        <h3>👤 Nome</h3>
+                        <p id="teacher-name">Carregando...</p>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3>📚 Disciplinas</h3>
+                        <p id="teacher-disciplines">Carregando...</p>
+                    </div>
+                </div>
+
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <h3>📝 Minhas Turmas</h3>
+                        <p>Visualize suas turmas e alunos</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>✏️ Lançar Notas</h3>
+                        <p>Registre notas e frequências</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>📋 Plano de Aula</h3>
+                        <p>Organize seu plano de aula</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>📊 Meus Relatórios</h3>
+                        <p>Veja relatórios de desempenho</p>
+                        <button class="btn-primary">Acessar</button>
+                    </div>
+                </div>
+
+                <!-- Seção de Pedidos -->
+                <div class="requests-section">
+                    <h3>📬 Pedidos Recentes</h3>
+                    <div class="requests-container" id="requests-container">
+                        <div class="empty-state">
+                            <p>Nenhum pedido no momento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decoração -->
+        <div class="dashboard-decoration"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../src/notifications.js"></script>
+    <script src="../src/api.js"></script>
+    <script src="../src/auth-guard.js"></script>
+    <script src="../src/menu-controls.js"></script>
+    <script src="../src/dashboard.js"></script>
+    <script src="../src/dashboard-role.js"></script>
+</body>
+</html>

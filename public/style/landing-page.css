@@ -1,0 +1,264 @@
+/* ============================================
+   LANDING PAGE - HERO SECTION
+   ============================================ */
+.hero {
+    margin-top: 80px;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-decoration {
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   LANDING PAGE - RECURSOS SECTION
+   ============================================ */
+.recursos {
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.recurso-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.recurso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+    border-color: var(--cor-primaria);
+}
+
+.recurso-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.recurso-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
+}
+
+.recurso-card p {
+    color: var(--cor-texto-claro);
+    line-height: 1.6;
+}
+
+/* ============================================
+   LANDING PAGE - PROMOÇÃO SECTION
+   ============================================ */
+.promocao {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.promocao-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.promocao-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.promocao-text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.7;
+}
+
+/* ============================================
+   LANDING PAGE - SOBRE SECTION
+   ============================================ */
+.sobre {
+    padding: 5rem 2rem;
+    background: white;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sobre-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-content p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+    line-height: 1.8;
+}
+
+/* ============================================
+   RESPONSIVIDADE LANDING PAGE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 70px;
+        padding: 3rem 1.5rem;
+        min-height: 400px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-decoration {
+        width: 300px;
+        height: 300px;
+        top: -30%;
+        right: -15%;
+    }
+
+    .hero-buttons {
+        gap: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .recursos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .promocao-title {
+        font-size: 1.8rem;
+    }
+
+    .promocao-text {
+        font-size: 1rem;
+    }
+
+    .recurso-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 120px;
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .recursos-grid {
+        gap: 1rem;
+    }
+
+    .recurso-card {
+        padding: 1.5rem;
+    }
+
+    .recurso-icon {
+        font-size: 2.5rem;
+    }
+}

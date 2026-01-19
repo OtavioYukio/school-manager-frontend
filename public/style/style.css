@@ -1,0 +1,21 @@
+/* ============================================
+   ARQUIVO PRINCIPAL DE ESTILOS
+   ============================================
+   Este arquivo importa todos os estilos
+   organizados por componente e página
+   ============================================ */
+
+/* Estilos Globais */
+@import url('./variables.css');
+@import url('./forms.css');
+
+/* Componentes */
+@import url('./hotbar.css');
+@import url('./footer.css');
+@import url('./notifications.css');
+
+/* Páginas */
+@import url('./landing-page.css');
+@import url('./login.css');
+@import url('./cadastro.css');
+@import url('./dashboard.css');

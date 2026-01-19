@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SchoolHub</title>
+    <link rel="stylesheet" href="../public/style/style.css">
+</head>
+<body>
+    <!-- Hotbar Ancorada -->
+    <nav class="hotbar">
+        <div class="hotbar-container">
+            <div class="hotbar-logo">
+                <h1>SchoolHub</h1>
+            </div>
+            
+            <ul class="hotbar-menu">
+                <li><a href="LandingPage.html" class="nav-link">Início</a></li>
+                <li><a href="LandingPage.html#recursos" class="nav-link">Recursos</a></li>
+                <li><a href="LandingPage.html#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="LandingPage.html#contato" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="hotbar-actions">
+                <button class="btn-entrar" onclick="window.location.href='LandingPage.html'">Voltar</button>
+                <button class="btn-cadastrar" onclick="window.location.href='Cadastro.html'">Cadastrar Instituição</button>
+            </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Principal de Login -->
+    <div class="login-container" id="login-container">
+        <div class="login-card fade-in">
+            <div class="login-header">
+                <h2>Bem-vindo de Volta!</h2>
+                <p>Entre com suas credenciais para acessar sua instituição</p>
+            </div>
+
+            <form class="login-form" onsubmit="handleLogin(event)">
+                <!-- Campo de Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="seu@email.com" 
+                        required
+                        class="form-input"
+                    >
+                    <span class="input-icon">✉️</span>
+                </div>
+
+                <!-- Campo de Senha -->
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        placeholder="••••••••" 
+                        required
+                        class="form-input"
+                    >
+                    <span class="input-icon">🔒</span>
+                    <button type="button" class="toggle-password" onclick="togglePassword()">
+                        👁️
+                    </button>
+                </div>
+
+                <!-- Lembrar e Recuperar Senha -->
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="lembrar" name="lembrar">
+                        <span>Lembrar-me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+
+                <!-- Botão Entrar -->
+                <button type="submit" class="btn-login">
+                    Entrar
+                </button>
+            </form>
+
+            <!-- Divider -->
+            <div class="form-divider">
+                <span>Novo por aqui?</span>
+            </div>
+
+            <!-- Link para Cadastro -->
+            <button type="button" class="btn-signup" onclick="window.location.href='Cadastro.html'">
+                Criar Instituição
+            </button>
+
+            <!-- Info de Segurança -->
+            <div class="security-info">
+                <p>🔐 Seus dados são protegidos com criptografia de ponta</p>
+            </div>
+        </div>
+
+        <!-- Decoração -->
+        <div class="login-decoration"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../src/notifications.js"></script>
+    <script src="../src/api.js"></script>
+    <script src="../src/menu-controls.js"></script>
+    <script src="../src/navigation.js"></script>
+    <script src="../src/login-form.js"></script>
+</body>
+</html>

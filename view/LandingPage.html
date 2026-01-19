@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Manager - Gerencie sua Instituição</title>
+    <link rel="stylesheet" href="../public/style/style.css">
+</head>
+<body>
+    <!-- Hotbar Ancorada -->
+    <nav class="hotbar">
+        <div class="hotbar-container">
+            <div class="hotbar-logo">
+                <h1>SchoolHub</h1>
+            </div>
+            
+            <ul class="hotbar-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#recursos" class="nav-link">Recursos</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="hotbar-actions">
+                <button class="btn-entrar" onclick="handleEntrar()">Entrar</button>
+                <button class="btn-cadastrar" onclick="handleCadastrar()">Cadastrar Instituição</button>
+            </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title fade-in">Transforme a Gestão da sua Escola</h2>
+            <p class="hero-subtitle fade-in-delay">Simplifique processos, conecte alunos, famílias e educadores em uma plataforma única e intuitiva</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="handleVamosComecar()">Vamos Começar</button>
+                <button class="btn-secondary">Conhecer Mais</button>
+            </div>
+        </div>
+
+        <div class="hero-decoration"></div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section id="recursos" class="recursos">
+        <h2 class="section-title">Por que escolher SchoolHub?</h2>
+        
+        <div class="recursos-grid">
+            <div class="recurso-card">
+                <div class="recurso-icon">📊</div>
+                <h3>Painel Administrativo</h3>
+                <p>Controle total de estudantes, professores e documentos em um só lugar</p>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">👥</div>
+                <h3>Comunicação Integrada</h3>
+                <p>Conecte pais, alunos e professores com avisos e notificações em tempo real</p>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">📚</div>
+                <h3>Gestão Acadêmica</h3>
+                <p>Notas, frequência, turmas e horários organizados e acessíveis</p>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">🔒</div>
+                <h3>Segurança de Dados</h3>
+                <p>Seus dados protegidos com criptografia de ponta e backup automático</p>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">📱</div>
+                <h3>100% Responsivo</h3>
+                <p>Acesse de qualquer dispositivo, a qualquer hora, em qualquer lugar</p>
+            </div>
+
+            <div class="recurso-card">
+                <div class="recurso-icon">⚡</div>
+                <h3>Desempenho Rápido</h3>
+                <p>Plataforma otimizada para velocidade e performance máximas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Promoção -->
+    <section class="promocao">
+        <div class="promocao-content">
+            <h2 class="promocao-title">Pronto para revolucionar a educação?</h2>
+            <p class="promocao-text">Junte-se a centenas de escolas que já confiam em SchoolHub para gerenciar suas instituições com eficiência e inovação</p>
+            <button class="btn-primary btn-large" onclick="handleVamosComecar()">Vamos Começar</button>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="sobre-content">
+            <h2 class="section-title">Sobre SchoolHub</h2>
+            <p>Desenvolvemos SchoolHub com o objetivo de simplificar a gestão escolar, permitindo que educadores foquem no que realmente importa: a educação de qualidade. Nossa plataforma combina tecnologia moderna com uma interface intuitiva para oferecer a melhor experiência possível.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SchoolHub</h4>
+                <p>Gerenciamento escolar simplificado</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contato@schoolhub.com</p>
+                <p>Tel: (11) 9999-9999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SchoolHub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../src/menu-controls.js"></script>
+    <script src="../src/navigation.js"></script>
+    <script src="../src/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* ============================================
+   COMPONENTES DE FORMULÁRIO
+   ============================================ */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+    font-family: inherit;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-input::placeholder {
+    color: #cbd5e1;
+}
+
+.form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 20px;
+    padding-right: 2.5rem;
+}
+
+.form-select option {
+    background: white;
+    color: var(--cor-texto);
+    padding: 0.5rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 2.3rem;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 2.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0;
+    transition: var(--transition-fast);
+}
+
+.toggle-password:hover {
+    transform: scale(1.1);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+}
+
+.checkbox-label input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--cor-primaria);
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+.btn-primary {
+    padding: 1rem 2.5rem;
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--cor-primaria-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+    padding: 1rem 2.5rem;
+    background: white;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+    background: var(--cor-primaria);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    background: white;
+    color: var(--cor-primaria);
+}
+
+.btn-large:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login,
+.btn-signup,
+.btn-avancar,
+.btn-cadastrar-final {
+    width: 100%;
+    padding: 0.95rem;
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.btn-login:hover,
+.btn-signup:hover,
+.btn-avancar:hover,
+.btn-cadastrar-final:hover {
+    background: var(--cor-primaria-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+}
+
+.btn-login:active,
+.btn-signup:active,
+.btn-avancar:active,
+.btn-cadastrar-final:active {
+    transform: translateY(0);
+}
+
+.btn-signup {
+    background: white;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+}
+
+.btn-signup:hover {
+    background: var(--cor-primaria);
+    color: white;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   RESPONSIVIDADE FORMULÁRIOS
+   ============================================ */
+@media (max-width: 480px) {
+    .form-input {
+        padding: 0.65rem 1rem 0.65rem 2.2rem;
+        font-size: 16px;
+    }
+
+    .input-icon {
+        top: 2.1rem;
+        font-size: 1rem;
+    }
+
+    .toggle-password {
+        top: 2.1rem;
+        font-size: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+}
