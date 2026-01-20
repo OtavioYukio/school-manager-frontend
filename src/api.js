@@ -2,7 +2,7 @@
    API - REQUISIÇÕES AO BACKEND
    ============================================ */
 
-const API_BASE_URL = 'http://localhost:8080/auth';
+const API_BASE_URL = 'https://school-manager-api-4w52.onrender.com/auth';
 
 // Função genérica para fazer requisições
 async function fazerRequisicao(endpoint, metodo, dados = null) {
